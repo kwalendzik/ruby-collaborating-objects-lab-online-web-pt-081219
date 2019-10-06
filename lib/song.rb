@@ -17,15 +17,11 @@ class Song
   end
   
   def self.new_by_filename(filename)
-    song = self.new
-    song.name = filename.split(" - ")
-    song
-    
     new_array = filename.split(" - ")
-        song = Song.new(new_array[1])
-        song.artist_name = new_array[0]
-        song
-      end
+    song = Song.new(new_array[1])
+    song.artist_name = new_array[0]
+    song
+    end
   end
 
    def artist_name=(name)
