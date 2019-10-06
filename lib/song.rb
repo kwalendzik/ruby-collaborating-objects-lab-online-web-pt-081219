@@ -21,7 +21,6 @@ class Song
     song = Song.new(new_array[1])
     song.artist_name = new_array[0]
     song
-    end
   end
 
    def artist_name=(name)
