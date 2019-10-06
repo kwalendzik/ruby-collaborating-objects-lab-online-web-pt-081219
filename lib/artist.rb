@@ -19,5 +19,12 @@ class Artist
   end
   
   def find_or_create_by_name
+    if (Song.artist.nil?)
+     Song.artist = Artist.new(name)
+    else
+     Song.artist.name = name
+    end
+  end
+
     
 end
