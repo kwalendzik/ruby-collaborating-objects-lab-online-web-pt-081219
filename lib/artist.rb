@@ -22,12 +22,12 @@ class Artist
   end
   
   def find_or_create_by_name
-    if (Song.artist.nil?)
-     Song.artist = Artist.new(name)
-    else
-     Song.artist.name = name
-    end
-  end
+    artist = @@all.find {|x| x.name == name} 
+    if artist == nil 
+    artist = Artist.new(name)
+    end 
+  artist
+  end 
   
   def print_songs
     Song.all.select {|song| song.artist == self}
