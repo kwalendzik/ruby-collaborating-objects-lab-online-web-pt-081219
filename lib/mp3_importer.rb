@@ -1,4 +1,4 @@
-class mp3importer
+class MP3Importer
   
   
   
